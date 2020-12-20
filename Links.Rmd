@@ -3,50 +3,60 @@ title: "Overview of Skills and Experience"
 output: html_document
 ---
 
-#### Introduction 
+### Introduction 
 After graduating from Florida Atlantic University in December 2019 with a degree in business economics, I began an applied economics masters program at the University of Wisconsin-Madison, with a concentration in resource and energy demand analysis.
 
 As someone who has always been passionate about energy and sustainability, I'm eager to begin a career that meshes my economic background with these interests. Upon graduation in July 2021, I hope to work as a consultant or analyst in the energy industry or a related area. 
 
 
-#### Skills
-##### Software
+### Skills
+#### Software
 - R, Excel, Microsoft Office, Stata, SPSS, EViews 
 - Familiarity with SQL, Java, and IMPLAN
 
-##### Econometrics
+#### Econometrics
 - Multiple linear regression, times series analysis, panel regression, clustering, instrumental variables, ext. 
 
-##### Data Analysis
+#### Data Analysis
 - Managing large datasets, data cleaning, data visualization, survey writing and analysis
 
-##### Business
+#### Business
 - analytical, organized, solution driven, efficient, inquisitive 
 
 
-#### Experience
-##### Dynamic Economic Strategy
-###### Research Assistant
-•	Developed effective visuals and detailed times series analyses for weekly newsletters and special topic publications
-•	Conducted research on financial data, preparing and editing summaries and reports to be utilized in presentations and writings 
-•	Implemented statistical packages including EViews and Stata to perform analyses on economic indicators 
-
-##### Florida Gulf Coast University
-###### Research Assistant
-•	Wrote and edited sections of ongoing regional climate surveys and quarterly reports
-•	Collected quantitative and qualitative data through contact with regional organizations and survey research 
-•	Supported university faculty on larger projects including the annual Southwest Florida Almanac and a case study of the Naples Winter Wine Festival
-•	Utilized SPSS and Impact Analysis for Planning (IMPLAN) for analysis of demographic and economic data
 
 
-##### Florida Atlantic University
-###### Independent Student Researcher
-•	Over the course of a semester, collected data and used statistical modeling to produce an econometric analysis of global renewable energy usage, exploring impacts of numerous factors including gross domestic product, natural resource rents, electricity access, and other demographic variables
-•	Showcased written report and presentation at the Broward Undergraduate Research Symposium 
+### Experience
+#### Dynamic Economic Strategy
+##### Research Assistant
+- Developed effective visuals and detailed times series analyses for weekly newsletters and special topic publications
+- Conducted research on financial data, preparing and editing summaries and reports to be utilized in presentations and writings 
+- Implemented statistical packages including EViews and Stata to perform analyses on economic indicators 
 
-###### Business and Economics Polling Initiative
-•	Wrote, conducted, and analyzed a public opinion poll on perceptions of media bias, using SPSS for data analysis
-•	Presented research at several conferences, including the National Undergraduate Research Conference and the Florida Undergraduate Research Symposium 
-•	Awarded 2nd place for community engagement at the FAU Undergraduate Research Symposium
+#### Florida Gulf Coast University
+##### Research Assistant
+- Wrote and edited sections of ongoing regional climate surveys and quarterly reports
+- Collected quantitative and qualitative data through contact with regional organizations and survey research 
+- Supported university faculty on larger projects including the annual Southwest Florida Almanac and a case study of the Naples Winter Wine Festival
+- Utilized SPSS and Impact Analysis for Planning (IMPLAN) for analysis of demographic and economic data
+
+
+#### Florida Atlantic University
+##### Independent Student Researcher
+- Over the course of a semester, collected data and used statistical modeling to produce an econometric analysis of global renewable energy usage, exploring impacts of numerous factors including gross domestic product, natural resource rents, electricity access, and other demographic variables
+- Showcased written report and presentation at the Broward Undergraduate Research Symposium 
+
+##### Business and Economics Polling Initiative
+- Wrote, conducted, and analyzed a public opinion poll on perceptions of media bias, using SPSS for data analysis
+- Presented research at several conferences, including the National Undergraduate Research Conference and the Florida Undergraduate Research Symposium 
+- Awarded 2nd place for community engagement at the FAU Undergraduate Research Symposium
+
+### Accomplishments
+#### Emerging Professionals Scholarship
+Awarded by the Association of Energy Services Professionals in August, 2019
+
+#### Phi Kappa Phi Honor Society
+Inducted by the Florida Atlantic University Chapter in April, 2019
+
 
 
