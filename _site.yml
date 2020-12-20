@@ -1,6 +1,6 @@
-name: "MyLabJournal"
+name: "Grace Sauter"
 navbar:
-  title: "MyLabJournal"
+  title: "Grace Sauter"
   left:
     - text: "Home"
       href: index.html
