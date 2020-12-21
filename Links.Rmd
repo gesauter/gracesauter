@@ -1,15 +1,22 @@
 ---
 title: "Overview of Skills and Experience"
-output: html_document
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 1
+    #code_folding: hide
 ---
 
-### Introduction 
+# Introduction 
 After graduating from Florida Atlantic University in December 2019 with a degree in business economics, I began an applied economics masters program at the University of Wisconsin-Madison, with a concentration in resource and energy demand analysis.
 
 As someone who has always been passionate about energy and sustainability, I'm eager to begin a career that meshes my economic background with these interests. Upon graduation in July 2021, I hope to work as a consultant or analyst in the energy industry or a related area. 
 
 
-### Skills
+# Skills
 #### Software
 - R, Excel, Microsoft Office, Stata, SPSS, EViews 
 - Familiarity with SQL, Java, and IMPLAN
@@ -26,7 +33,7 @@ As someone who has always been passionate about energy and sustainability, I'm e
 
 
 
-### Experience
+# Experience
 #### Dynamic Economic Strategy
 ##### Research Assistant
 - Developed effective visuals and detailed times series analyses for weekly newsletters and special topic publications
@@ -51,7 +58,7 @@ As someone who has always been passionate about energy and sustainability, I'm e
 - Presented research at several conferences, including the National Undergraduate Research Conference and the Florida Undergraduate Research Symposium 
 - Awarded 2nd place for community engagement at the FAU Undergraduate Research Symposium
 
-### Accomplishments
+# Accomplishments
 #### Emerging Professionals Scholarship
 Awarded by the Association of Energy Services Professionals in August, 2019
 

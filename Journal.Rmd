@@ -19,9 +19,7 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 Here, I'll be adding graphs I make in R on a variety of topics.
 
 # TED Spread
-
 2020 | 12 | 20 Last compiled: `r Sys.Date()`
-
 
 #### A Fun Graph
 ```{r include=FALSE}
@@ -47,14 +45,12 @@ library(xts)
 library(dygraphs)
 library(scales)
 library(htmlwidgets)
+library(gapminder)
 
 ```
 
 
 ```{r include=FALSE}
-# Since my time is currently a factor, I have to convert it to a date-time format!
-
-# Then you can create the xts necessary to use dygraph
 
 data_dirxx <-"~/Documents/Dynamic Economics/EViews Graphs/Part I" 
 data11 <- read_excel(file.path(data_dirxx,
@@ -87,3 +83,6 @@ p <- dygraph(don,
 ```{r echo=FALSE}
 p
 ```
+
+
+
