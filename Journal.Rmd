@@ -21,7 +21,6 @@ Here, I'll be adding graphs I make in R on a variety of topics.
 # TED Spread
 2020 | 12 | 20 Last compiled: `r Sys.Date()`
 
-#### A Fun Graph
 ```{r include=FALSE}
 library(dplyr)
 library(magrittr) 
@@ -46,6 +45,13 @@ library(dygraphs)
 library(scales)
 library(htmlwidgets)
 library(gapminder)
+library(gganimate)
+library(babynames)
+library(hrbrthemes)
+library(viridis)
+library(gifski)
+library(gapminder)
+library(png)
 
 ```
 
@@ -84,5 +90,27 @@ p <- dygraph(don,
 p
 ```
 
+# Baby Names
+
+```{r include=FALSE}
+don <- babynames %>% 
+  filter(name %in% c("Grace", "Frances", "Kimberly")) %>%
+  filter(sex=="F")
+  
+# Plot
+don %>%
+  ggplot( aes(x=year, y=n, group=name, color=name)) +
+    geom_line() +
+    geom_point() +
+    scale_color_viridis(discrete = TRUE) +
+    ggtitle("Popularity of American names since 1880") +
+    theme_ipsum() +
+    ylab("Number of babies born") +
+    transition_reveal(year)
+```
+
+```{r echo=FALSE}
+don
+```
 
 
