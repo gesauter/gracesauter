@@ -19,7 +19,7 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 Here, I'll be adding graphs I make in R on a variety of topics.
 
 # TED Spread
-2020 | 12 | 20 Last compiled: `r Sys.Date()`
+2020 | 12 | 20
 
 ```{r include=FALSE}
 library(dplyr)
@@ -91,6 +91,7 @@ p
 ```
 
 # Baby Names
+2020 | 12 | 20
 
 ```{r include=FALSE}
 don <- babynames %>% 
@@ -98,7 +99,7 @@ don <- babynames %>%
   filter(sex=="F")
   
 # Plot
-don %>%
+plotd <- don %>%
   ggplot( aes(x=year, y=n, group=name, color=name)) +
     geom_line() +
     geom_point() +
@@ -110,7 +111,7 @@ don %>%
 ```
 
 ```{r echo=FALSE}
-don
+plotd
 ```
 
 
