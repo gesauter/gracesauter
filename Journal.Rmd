@@ -17,6 +17,7 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 
 
 Here, I'll be adding graphs I make in R on a variety of topics.
+
 # TED Spread
 
 2020 | 12 | 20 Last compiled: `r Sys.Date()`
