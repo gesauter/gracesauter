@@ -16,10 +16,8 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 
 
 
-Here, I'll be adding graphs I make in R on a variety of topics.
+Here, I'll be adding graphs and other visuals made in R on a variety of topics.
 
-# TED Spread
-2020 | 12 | 20
 
 ```{r include=FALSE}
 library(dplyr)
@@ -54,6 +52,57 @@ library(gapminder)
 library(png)
 
 ```
+
+
+# Electricity Generation by Source
+2020 | 12 | 22
+
+This plot shows US electricity generation since 1984 broken down by generation source using data from the US Energy Information Administration.  As you can see, coal was the primary source leading into the 21st century, but just before 2010, dropped off sharply and was overtaken by natural gas.  Around the same time, petroleum also began to fall.  On the other hand, renewables have been climbing steadily since the early 90s and the rate of increase took off in the mid 2000s.  Nuclear power saw an earlier increase, rising most before 2000, and leveling off from that point forward.  Going into the 2020s, it's expected that coal power will continue to drop off and renewables will make up the lost generation.  Nuclear power has huge potential to assist in replacing fossil fuels and as an excellent clean energy source, could be vital in reaching emission reduction goals in the future. 
+
+```{r include=FALSE}
+data_dirl <-"~/Documents/Dynamic Economics/EViews Graphs/R" 
+data2 <- read_excel(file.path(data_dirl,
+                                    "gen.xlsx"))
+
+names(data2) <- data2[5,]
+data2 <- data2[-c(1:5),]
+data2$year <- as.numeric(data2$year)
+data2$gen <- as.numeric(data2$gen)
+data2$percent <- as.numeric(data2$percent)
+
+data2 %>%
+  ggplot( aes(x=year, y=gen, group=type, color=type)) +
+    geom_line()
+
+# Plot
+plotdd <- data2 %>%
+  ggplot( aes(x=year, y=gen, group=type, color=type)) +
+    geom_line() +
+    geom_point() +
+    scale_color_viridis(discrete = TRUE) +
+    labs(title="U.S. electricity generation by major energy source",
+              subtitle="Billion kWh from utility-scale facilities")+
+    theme_ipsum() +
+    ylab("Billion kWh") +
+    xlab("Year")+
+    scale_color_manual(name="Source",
+                       labels=c("Coal","Natural Gas","Nuclear", "Petroleum + other", "Renewables"),
+                       values=c("red","orange","yellow", "green", "blue"))+
+    transition_reveal(year)
+
+```
+
+
+```{r echo=FALSE}
+plotdd
+```
+
+# TED Spread
+2020 | 12 | 20
+
+This graph is a simple plot of the TED Spread from 1986 until present day, using data from FRED.  The TED spread is the difference between the three-month Treasury bill and the three-month LIBOR based in US dollars, or in other words, the difference between the interest rate on short-term US government debt and the interest rate on interbank loans.  It can be used as an indicator of the solvency of financial institutions, monetary liquidity, and percieved risk of the financial system and as a result, is considered important to investment analysis.  To make this graph, I used the package "dygraphs" which displays data point values on the graph when hovered over and allows the viewer to adjust the x axis as desired. 
+
+
 
 
 ```{r include=FALSE}
@@ -115,6 +164,7 @@ plotd <- don %>%
 ```{r echo=FALSE}
 plotd
 ```
+
 
 
 
