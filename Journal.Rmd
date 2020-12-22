@@ -50,6 +50,9 @@ library(viridis)
 library(gifski)
 library(gapminder)
 library(png)
+library(prettydoc)
+
+#install.packages("prettydoc")
 
 ```
 
