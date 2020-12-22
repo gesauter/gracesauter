@@ -68,9 +68,9 @@ data11 <- data11[-c(1:10),-c(3:5)]
 data11$observation_date <-  excel_numeric_to_date(as.numeric(as.character(data11$observation_date)), date_system = "modern")
 data11$spread <- as.numeric(data11$spread)
 
-don <- xts(x = data11$spread, order.by = data11$observation_date)
+dona <- xts(x = data11$spread, order.by = data11$observation_date)
 
-p <- dygraph(don,
+p <- dygraph(dona,
              main = "TED Spread",
              ylab = "Spread(%)",
              xlab = "Date") %>%
@@ -93,6 +93,8 @@ p
 # Baby Names
 2020 | 12 | 20
 
+A fun plot made using data from the R package "babynames".  I selected my name, as well as my sister and mothers names to plot from 1880 until present day.  Frances was much more popular around 1920 and Grace became most popular around 2000, a few years after I was born.  Kimberly experienced a huge spike in popularity in the 1960's, which is when my mother was born.  Looking at this data, it appears that my mother had the trendiest name, while I was named slightly ahead of the trend.  Frances, however, is timeless!
+
 ```{r include=FALSE}
 don <- babynames %>% 
   filter(name %in% c("Grace", "Frances", "Kimberly")) %>%
@@ -113,5 +115,6 @@ plotd <- don %>%
 ```{r echo=FALSE}
 plotd
 ```
+
 
 
