@@ -31,9 +31,9 @@ Email: gracesauter1@gmail.com
 </div>
 <div class="col-sm-6">
 
-### [********](https://crumplab.github.io)
+### ********
 
-<a href = "https://crumplab.github.io">
-![](images/logo.png)
+<a href = "https://www.linkedin.com/in/gracesauter/">
+![](images/gradpic.png)
 </a>
 </div>

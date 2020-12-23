@@ -66,6 +66,7 @@ library(usmap)
 ```
 
 
+
 # Electricity Generation by Source
 2020 | 12 | 23
 
@@ -109,6 +110,9 @@ plotdd <- data2 %>%
 plotdd
 ```
 
+
+
+
 # White Christmas
 2020 | 12 | 22
 
@@ -144,6 +148,8 @@ map <- plot_usmap() +
 ```{r echo=FALSE}
 map
 ```
+
+
 
 # TED Spread
 2020 | 12 | 20
@@ -186,6 +192,8 @@ p <- dygraph(dona,
 ```{r echo=FALSE}
 p
 ```
+
+
 
 # Baby Names
 2020 | 12 | 20
