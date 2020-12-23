@@ -19,7 +19,7 @@ output: html_document
 
 # **Grace Sauter**
 
-Welcome!  My name is Grace Sauter and I'm a graduate student at the University of Wisconsin in Madison.  I'm working on my MS in Applied Economics with a concentration in resource and energy demand analysis, but in my free time, I'm working on improving my data visualization and coding skills, which is why I'm built this site.  Feel free to explore! 
+Welcome!  My name is Grace Sauter and I'm a graduate student at the University of Wisconsin in Madison.  I'm working on my MS in Applied Economics with a concentration in resource and energy demand analysis, but in my free time, I'm working on improving my data visualization and coding skills, which is why I built this site.  Feel free to explore! 
 
 ## Contact Info
 
