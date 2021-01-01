@@ -1,6 +1,6 @@
 ---
 title: "Overview of Skills and Experience"
-output:
+output: 
   html_document:
     toc: true
     toc_float: true
@@ -9,6 +9,7 @@ output:
     toc_depth: 1
     #code_folding: hide
 ---
+
 
 # Introduction 
 After graduating from Florida Atlantic University in December 2019 with a degree in business economics, I began an applied economics masters program at the University of Wisconsin-Madison, with a concentration in resource and energy demand analysis.
