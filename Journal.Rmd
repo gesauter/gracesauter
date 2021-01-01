@@ -65,13 +65,44 @@ library(forcats)
 
 ```
 
-# Energy Burdens and Insecurity
+# Energy Burdens
 2020 | 12 | 31
 
-In this set of graphs, energy burden, the proportion of household income spent on energy, and energy insecurity are observed.  The U.S. Energy and Information Administration Residential Energy Consumption Survey, conducted every 4-5 years, looks at energy insecurity, which is defined by the criteria of reducing or forgoing food or medicine to pay energy costs, leaving the home at an unhealthy temperature, receiving disconnect or delivery stop notice from utilities, and the inability to use heating and/or cooling equipment to limit energy costs.  About 37 million households experienced energy insecurity in 2015 and breaking it down by race, we see that a quarter of white households experienced energy insecurity, while 44% of Hispanic households, 52% of black of African American households, and 54% of American Indian or Alaskan Native households experienced energy insecurity.
+Energy burden, the proportion of household income spent on energy, is closely related to energy insecurity, discussed previously.  In the map below, energy burden of low to moderate income households is displayed at the county level using data from the National Renewable Energy Laboratory.  For reference, high energy burdens are defined as greater than 6% of income, while severe energy burdens are those greater than 10% of income.  In the US, the average energy burden is approximately 3%, but for low income households, is nearly three times larger at about 8.6%.  Energy burdens are far from equally distributed across the US with  parts of Pennsylvania, West Virginia, Virginia, Kentucky and Tennessee all showing high energy burdens.  Communities in the Gulf Coast and Southeast, especially Louisiana, Mississippi, Alabama, Georgia, and north Florida up to the Carolinas also experience high energy burdens. These areas lmay have particularly high electric and heating bills because of regional climate patterns, leading to decreased energy affordability and higher energy burdens for LMI households. 
+ 
 
 ```{r include=FALSE}
 data_dirl <-"~/Documents/Dynamic Economics/EViews Graphs/R" 
+
+databb <- read_excel(file.path(data_dirl,
+                               "Book5.xlsx"))
+data(county.fips)
+
+
+year_df <- databb[c("region", "ebb")]
+counties <- county.fips %>% left_join(year_df, by=c('fips'='region'))
+ ebb <- plot_usmap(data = counties, values = "ebb", labels=FALSE, color=NA, include=c("AL", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA","ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", 
+          "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", 
+          "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", 
+          "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY")) + 
+  scale_fill_continuous(low = "white", high = "blue4", 
+                         name = "Burden (%)", label = scales::comma)+
+  labs(title = "Energy Burden by County for LMI households",subtitle="Average energy expenditures as a percent of income", caption = "Source: National Renewable Energy Laboratory")+
+    theme(legend.position = "right", panel.background = element_rect(colour = "black"),plot.title = element_text(size = 12.2, face = "bold"))
+```
+
+
+```{r echo=FALSE}
+ebb
+```
+
+
+# Energy Insecurity
+2020 | 12 | 30
+
+The U.S. Energy and Information Administration Residential Energy Consumption Survey, conducted every 4-5 years, looks at energy insecurity, which is defined by the criteria of reducing or forgoing food or medicine to pay energy costs, leaving the home at an unhealthy temperature, receiving disconnect or delivery stop notice from utilities, and the inability to use heating and/or cooling equipment to limit energy costs.  About 37 million households experienced energy insecurity in 2015, which is over 30% of American households.  Breaking this down by race, major disparity is observed, with only quarter of white households experiencing energy insecurity, while 44% of Hispanic households, 52% of black of African American households, and 54% of American Indian or Alaskan Native households experienced energy insecurity.
+
+```{r include=FALSE}
 datax <- read_excel(file.path(data_dirl,
                                "Book3.xlsx"))
 
@@ -105,34 +136,9 @@ ggplot(datax, aes(x=as.factor(race), y=percent, fill = race)) +
 
 ```{r echo=FALSE}
 eb
-
-```
-
-Energy insecurity is closely related to energy burden and in the map below, energy burden of low to moderate income households is displayed at the county level.  Energy burdens are far from equally distributed across the US with  parts of Pennsylvania, West Virginia, Virginia, Kentucky and Tennessee all showing high energy burdens.  Communities in the Gulf Coast and Southeast, especially Louisiana, Mississippi, Alabama, Georgia, and north Florida up to the Carolinas also experience high energy burdens. These areas lmay have particularly high electric and heating bills because of regional climate patterns, leading to decreased energy affordability and higher energy burdens for LMI households. 
- 
-
-```{r include=FALSE}
-databb <- read_excel(file.path(data_dirl,
-                               "Book5.xlsx"))
-data(county.fips)
-
-
-year_df <- databb[c("region", "ebb")]
-counties <- county.fips %>% left_join(year_df, by=c('fips'='region'))
- ebb <- plot_usmap(data = counties, values = "ebb", labels=FALSE, color=NA, include=c("AL", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA","ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", 
-          "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", 
-          "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", 
-          "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY")) + 
-  scale_fill_continuous(low = "white", high = "blue4", 
-                         name = "Burden (%)", label = scales::comma)+
-  labs(title = "Energy Burden by County for LMI households",subtitle="Average energy expenditures as a percent of income", caption = "Source: National Renewable Energy Laboratory")+
-    theme(legend.position = "right", panel.background = element_rect(colour = "black"),plot.title = element_text(size = 12.2, face = "bold"))
 ```
 
 
-```{r echo=FALSE}
-ebb
-```
 
 # Electricity Generation by Source
 2020 | 12 | 23
