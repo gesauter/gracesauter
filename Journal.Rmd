@@ -1,13 +1,12 @@
 ---
-title: "Journal"
+title: "--"
 output:
-  html_document:
-    toc: true
-    toc_float: true
-    collapsed: false
-    number_sections: false
-    toc_depth: 1
-    #code_folding: hide
+ rmdformats::readthedown:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: true
+    highlight: tango
 ---
 
 Here, I'll be adding graphs and other visuals made in R on a variety of topics.  I'm working on improving my R skills and really enjoy trying out new packages and visualization tools, so these graphs are in no way meant to be professional quality and are simply a way for me to post my progress in this small portfolio.  Enjoy!  
@@ -68,7 +67,7 @@ library(forcats)
 # Energy Burden
 2020 | 12 | 31
 
-Energy burden, the proportion of household income spent on energy, is closely related to energy insecurity, discussed previously.  In the map below, energy burden of low to moderate income households is displayed at the county level using data from the National Renewable Energy Laboratory.  For reference, high energy burdens are defined as greater than 6% of income, while severe energy burdens are those greater than 10% of income.  In the US, the average energy burden is approximately 3%, but for low income households, is nearly three times larger at about 8.6%.  Energy burdens are far from equally distributed across the US with  parts of Pennsylvania, West Virginia, Virginia, Kentucky and Tennessee all showing high energy burdens.  Communities in the Gulf Coast and Southeast, especially Louisiana, Mississippi, Alabama, Georgia, and north Florida up to the Carolinas also experience high energy burdens. These areas lmay have particularly high electric and heating bills because of regional climate patterns, leading to decreased energy affordability and higher energy burdens for LMI households. 
+Energy burden, the proportion of household income spent on energy, is closely related to energy insecurity, discussed previously.  In the map below, energy burden of low to moderate income households is displayed at the county level using data from the National Renewable Energy Laboratory.  For reference, high energy burdens are defined as greater than 6% of income, while severe energy burdens are those greater than 10% of income.  In the US, the average energy burden is approximately 3%, but for low income households, is nearly three times larger at about 8.6%.  Energy burdens are far from equally distributed across the US with  parts of Pennsylvania, West Virginia, Virginia, Kentucky and Tennessee all showing high energy burdens.  Communities in the Gulf Coast and Southeast, especially Louisiana, Mississippi, Alabama, Georgia, and north Florida up to the Carolinas also experience high energy burdens. These areas may have particularly high electric and heating bills because of regional climate patterns, leading to decreased energy affordability and higher energy burdens for LMI households. 
  
 
 ```{r include=FALSE}
@@ -211,7 +210,7 @@ unique(data$State)
 
 map <- plot_usmap() +
   geom_point(data = transform, aes(x = lon.1, y = lat.1, col = prob), size=2.2, alpha=.8) +
-  labs(title = "Probabilty of a White Christmas by Location",
+  labs(title = "Probability of a White Christmas by Location",
        subtitle = "Source: National Oceanic and Atmospheric Administration, 2016",
        col = "Probability") +
   theme(plot.title = element_text(size = 14, face = "bold"), legend.position = "right")

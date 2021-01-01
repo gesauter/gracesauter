@@ -1,6 +1,12 @@
 ---
-title: "Grace Test"
-output: html_document
+title: "--"
+output:
+ rmdformats::readthedown:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: true
+    highlight: tango
 ---
 
 <style type="text/css">
