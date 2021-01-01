@@ -3,13 +3,13 @@ title: "--"
 output:
  rmdformats::readthedown:
     self_contained: true
-    thumbnails: true
+    thumbnails: false
     lightbox: true
     gallery: true
     highlight: tango
 ---
 
-Here, I'll be adding graphs and other visuals made in R on a variety of topics.  I'm working on improving my R skills and really enjoy trying out new packages and visualization tools, so these graphs are in no way meant to be professional quality and are simply a way for me to post my progress in this small portfolio.  Enjoy!  
+Here, I'll be adding graphs and other visuals made in R on a variety of topics.  I'm working on improving my R skills and enjoy trying out new packages and visualization tools, so these graphs are in no way meant to be professional quality and are simply a way for me to post my progress in this small portfolio.  I've included data sources and a short description of each graph below. Enjoy!  
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
