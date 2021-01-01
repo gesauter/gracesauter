@@ -4,7 +4,7 @@ output:
  rmdformats::readthedown:
     self_contained: true
     thumbnails: false
-    lightbox: true
+    lightbox: false
     gallery: true
     highlight: tango
 ---
