@@ -40,3 +40,7 @@ usmap
 rmdformats
 maps
 forcats
+tidyverse
+readr
+purrr
+stringr
