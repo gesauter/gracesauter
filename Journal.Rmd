@@ -73,7 +73,7 @@ In this graph, we look at global primary energy consumption by source from 1800 
 I'm working on some modifications to improve the readability of this graph, but this is it for now.
 
 ```{r include=FALSE}
-data_dir <-"~/Documents/Dynamic Economics/EViews Graphs/R" 
+data_dir <-"~/Documents/testGit/gracesauter/Data" 
 
 data08 <- read_csv(file.path(data_dir,
                                "globalenergy.csv"))
@@ -112,7 +112,6 @@ Energy burden, the proportion of household income spent on energy, is closely re
  
 
 ```{r include=FALSE}
-data_dir <-"~/Documents/Dynamic Economics/EViews Graphs/R" 
 
 databb <- read_excel(file.path(data_dir,
                                "Book5.xlsx"))
@@ -272,8 +271,7 @@ This graph is a simple plot of the TED Spread from 1986 until present day, using
 
 ```{r include=FALSE}
 
-data_dirxx <-"~/Documents/Dynamic Economics/EViews Graphs/Part I" 
-data11 <- read_excel(file.path(data_dirxx,
+data11 <- read_excel(file.path(data_dir,
                                "TED.xls"))
 
 names(data11) <- data11[10,]
