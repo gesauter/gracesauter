@@ -59,10 +59,59 @@ library(usmap)
 library(maps)
 library(rmdformats)
 library(forcats)
+library(stats)
 
 
 #install.packages("rmdformats")
 
+```
+# Per Capita Carbon Emissions
+2021 | 01 | 20
+
+In this graph, we examine per capita $CO_2$ emissions in the United States, Australia, Canada, and Germany using data from [Our World in Data](https://ourworldindata.org/).  The data looks at carbon dioxide emissions from burning fossil fuels for energy and cement production, in tonnes per capita.  The graph includes global emissions per capita from 1900 onward, which follow a very different trend than the rest of data.  Each of the countries included are OECD countries and follow a similar pattern with a steep increase in per capita emissions occurring after the Industrial Revolution, continuing until the start of the 21st century.  Australia lagged slightly behind, experiencing a more gradual increase prior to 1950 and climbing sharply from that point forward.  Germany had a striking drop in per capita emissions in 1945, likely stifled as due to the end of World War II, but recovered soon after.  Over the years, the US has consistently had the highest per capita emissions of this group, but also appears to be falling at a slightly faster pace since 2000.  Globally, emissions per capita are much lower than OECD countries, which highlights the huge disparity in energy access and usage experienced by billions.  As more developed countries emissions begin to fall, it is crucial that less developed countries are still able to industrialize and experience the level of economic growth that initially brought about the massive increase in emissions in OECD countries 100 years ago, but through the implementation of cleaner technologies.       
+
+```{r include=FALSE}
+data_dir <-"~/Documents/testGit/gracesauter/Data" 
+
+data09 <- read_excel(file.path(data_dir,
+                                "co-emissions-per-capita.xlsx"))
+
+summary(data09)
+names(data09) <- data09[1,]
+data09 <- data09[-c(1:2),]
+data09 <- data09 %>% rename(Emissions =`Per capita CO2 emissions`)
+data09 <- data09 %>% rename(Country = Entity)
+
+dat09 <- data09 %>% filter(Code %in% c("USA", "AUS", "CAN", "DEU", "OWID_WRL"))
+data09$Emissions <- as.numeric(data09$Emissions)
+
+xx <- data09 %>% group_by(Code) %>% 
+  summarize(mean = mean(Emissions, na.rm = TRUE))
+            
+dat09$Emissions <- as.numeric(dat09$Emissions)
+dat09$Year <- as.numeric(dat09$Year)
+
+dat09 %>% filter(Code=="OWID_WRL", Year==2015) %>% 
+  summarize(mean = mean(Emissions, na.rm=TRUE))
+dd <- dat09 %>% filter(Code =="DEU")
+cap <- dat09 %>% filter(Year>1850) %>% 
+  ggplot( aes(x=Year, y=Emissions, group=Country, color=Country)) +
+    geom_line()+
+   ylab("Emissions (Tonnes)")+
+   labs(title = "Carbon emissions throughout history",
+        subtitle="In per capita emissions from burning fossil fuels for energy and cement production", 
+        caption = "Source: Our World in Data")+
+    theme(legend.position = "right", panel.background = element_rect(colour = "black"),
+          plot.title = element_text(size = 14, face = "bold"))+
+  geom_hline(yintercept=4.805382, color="black", size=.2, alpha = 0.7, linetype = "dashed")+
+  annotate(geom="text", x=1863, y=5.5, size=2.5,label="global average - 2015")+
+  scale_y_continuous(sec.axis = sec_axis(~.))
+   
+   
+```
+
+```{r echo=FALSE}
+cap
 ```
 
 # Global Energy Consumption
@@ -73,8 +122,6 @@ In this graph, we look at global primary energy consumption by source from 1800 
 I'm working on some modifications to improve the readability of this graph, but this is it for now.
 
 ```{r include=FALSE}
-data_dir <-"~/Documents/testGit/gracesauter/Data" 
-
 data08 <- read_csv(file.path(data_dir,
                                "globalenergy.csv"))
 data08 %>% rowSums()
@@ -282,7 +329,7 @@ data11$spread <- as.numeric(data11$spread)
 
 dona <- xts(x = data11$spread, order.by = data11$observation_date)
 
-p <- dygraph(dona,
+ted <- dygraph(dona,
              main = "TED Spread",
              ylab = "Spread(%)",
              xlab = "Date") %>%
@@ -299,7 +346,7 @@ p <- dygraph(dona,
 ```
 
 ```{r echo=FALSE}
-p
+ted
 ```
 
 

@@ -21,11 +21,11 @@ As someone who has always been passionate about energy and sustainability, I'm e
 
 Master of Science in Agricultural and Applied Economics 
 
-Concentration: Resource and Energy Demand Analysis
+Concentration: Resource and Energy Demand Analysis - [Program website](https://reda.aae.wisc.edu/about/)
 
 Cumulative GPA: 4.00/4.00
 
-[Program website](https://reda.aae.wisc.edu/about/)
+
 
 
 
@@ -47,13 +47,13 @@ Overall GPA: 3.68/4.00
 - Familiarity with SQL, Java, and IMPLAN
 
 #### Econometrics
-- Multiple linear regression, times series analysis, panel regression, clustering, instrumental variables, ext. 
+- Multiple linear regression, times series analysis, panel regression, clustering, instrumental variables, logit and probit models,survey and sample design, ext. 
 
 #### Data Analysis
-- Managing large datasets, data cleaning, data visualization, survey writing and analysis
+- Managing large data sets, data cleaning, data visualization, survey writing and analysis
 
 #### Business
-- analytical, organized, solution driven, efficient, inquisitive 
+- Analytical, organized, solution driven, efficient, inquisitive 
 
 
 
