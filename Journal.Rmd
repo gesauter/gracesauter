@@ -159,7 +159,6 @@ Energy burden, the proportion of household income spent on energy, is closely re
  
 
 ```{r include=FALSE}
-
 databb <- read_excel(file.path(data_dir,
                                "Book5.xlsx"))
 data(county.fips)
