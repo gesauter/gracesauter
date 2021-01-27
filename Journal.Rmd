@@ -167,12 +167,27 @@ data(county.fips)
 
 year_df <- databb[c("region", "ebb")]
 counties <- county.fips %>% left_join(year_df, by=c('fips'='region'))
- ebb <- plot_usmap(data = counties, values = "ebb", labels=FALSE, color=NA, include=c("AL", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA","ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", 
+counties <- counties %>% 
+  mutate(cat = case_when(ebb < 3.1 ~ "1",
+                         ebb >= 3.1 & ebb < 6 ~ "2",
+                         ebb >=6 & ebb <10 ~ "3",
+                         ebb >=10 & ebb < 20 ~ "4",
+                         ebb >=20 & ebb < 40 ~ "5",
+                         ebb >=40 ~ "6",
+                         TRUE ~ "NA"))
+
+
+group.colors <- c("1" = "lightskyblue1", "2" = "cornflowerblue", "3" ="blue1", "4" = "orange1", "5" = "red3", "6" = "darkred")
+
+counties <- na.omit(counties)
+
+
+ ebb <- plot_usmap(data = counties, values = "cat", labels=FALSE, color=NA, include=c("AL", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA","ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", 
           "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", 
           "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", 
           "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY")) + 
-  scale_fill_continuous(low = "white", high = "blue4", 
-                         name = "Burden (%)", label = scales::comma)+
+    scale_fill_manual(values=group.colors, name = "Burden (%)",
+                      labels = c("< 3.1%", "3.1 to <6%", "6 to <10%", "10 to <20%", "20 to <40%", "40% +", "NA"))+
   labs(title = "Energy Burden by County for LMI households",subtitle="Average energy expenditures as a percent of income", caption = "Source: National Renewable Energy Laboratory")+
     theme(legend.position = "right", panel.background = element_rect(colour = "black"),plot.title = element_text(size = 12.2, face = "bold"))
 ```
