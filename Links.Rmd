@@ -12,14 +12,14 @@ output:
 # Introduction
 After graduating from Florida Atlantic University in December 2019 with a degree in business economics, I began an applied economics masters program in June 2020 at the University of Wisconsin-Madison, with a concentration in resource and energy demand analysis.
 
-As someone who has always been passionate about energy and sustainability, I'm eager to begin a career that meshes my economic background with these interests. Upon graduating in July 2021, I hope to work as a consultant or analyst in the energy industry or a related area. 
+As someone who has always been passionate about energy and sustainability, I'm eager to begin a career that meshes my economic background with these interests.  I love econometrics and working with data to solve problems, so I am excited by the prospect of being able to use these in my career.  Upon graduating in July 2021, I will be beginning a full time position as a consultant for the Energy, Sustainability, and Infrastructure practice at Guidehouse in Boulder, Colorado. 
 
 # Education
 #### University of Wisconsin-Madison  	
 ##### June 2020 - July 2021
 
 
-Master of Science in Agricultural and Applied Economics 
+Degree: Master of Science in Agricultural and Applied Economics 
 
 Concentration: Resource and Energy Demand Analysis - [Program website](https://reda.aae.wisc.edu/about/)
 
@@ -47,7 +47,7 @@ Overall GPA: 3.68/4.00
 - Familiarity with SQL, Java, and IMPLAN
 
 #### Econometrics
-- Multiple linear regression, times series analysis, panel regression, clustering, instrumental variables, logit and probit models,survey and sample design, ext. 
+- Multiple linear regression, times series analysis, panel regression, clustering, instrumental variables, logit and probit models, survey and sample design, maximum likelihood estimation, matching methods, ext. 
 
 #### Data Analysis
 - Managing large data sets, data cleaning, data visualization, survey writing and analysis
@@ -66,11 +66,12 @@ Overall GPA: 3.68/4.00
 
 - Advanced Solutions, ES&I Analytics - Campus 2021
 - Participated in internship in conjunction with REDA graduate program in spring 2021
+- Using matching methods, estimated the average treatment effect of a demand response smart thermostat program
 
 
 #### Dynamic Economic Strategy
 ##### Research Assistant
-##### October 2019 - Present
+##### October 2019 - March 2021
 
 - Developed effective visuals and detailed times series analyses for weekly newsletters and special topic publications
 - Conducted research on financial data, preparing and editing summaries and reports to be utilized in presentations and writings 
@@ -107,6 +108,9 @@ Overall GPA: 3.68/4.00
 - Awarded 2nd place for community engagement at the FAU Undergraduate Research Symposium
 
 # Accomplishments
+#### NABE Foundation Scholarship
+Awarded by the National Association for Business Economics in March, 2021
+
 #### Emerging Professionals Scholarship
 Awarded by the Association of Energy Services Professionals in August, 2019
 
